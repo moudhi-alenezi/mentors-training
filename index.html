@@ -4,35 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://th.bing.com/th/id/R.b884d75c4c3202b333dcabbe2815c0d5?rik=C1cqvaWAYEjyUA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_80490.png&ehk=zop06d42BJ98shUGPQRC2ajFT8IfJz25F755kfL3tM8%3d&risl=&pid=ImgRaw&r=0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">    
     <title>Grading System</title>
 </head>
 <body>
     <div class="searchBar">
-<label style=" margin-left: 46%;" for="search">Search students</label>
-<input style="width: 150px; margin-left: 44%;"type="search" id="searchh" placeholder="name" onkeydown="search()">
+<label  for="srch"><i id="srchicn" class="bi bi-search" aria-hidden="true"></i></label>
+<input onkeyup="kyd()" type="search" id="srch" placeholder="name" onkeydown="search()">
 </div>
-    <div class="container">
-    <div class="studentList">
-       <a href="./page2.html"> <div class="student">
-            <div class="pic" style="background-image: url('./1.jpeg'); background-size: cover;"></div>
-            <div class="name"><h2>sara mohammad almutairi</h2> </div>
-            <div class="track"><h4>web</h4></div>
-        </div></a>
-        <div class="student">
-            <div class="pic" style="background-image: url('./2.jpeg'); background-size: cover;"></div>
-            <div class="name"><h2>noor khalid ajlaan</h2> </div>
-            <div class="track"><h4>web</h4></div>
-        </div>
-        <div class="student">
-            <div class="pic" style="background-image: url('./3.jpeg'); background-size: cover;"></div>
-            <div class="name"><h2>moudhi mohammad alenezi</h2> </div>
-            <div class="track"><h4>web</h4></div>
-        </div>
-
+    <div id="list" class="container">
     </div>
+<div id="gradingContainer">
+    <div id="gradesCard">
+        <button onclick="dlt()" id="delete">X</button>
+        <div id="stuInfoCard"></div>
+        <div id="cwBx">
+            <p>Class Work :</p>
+            <input id="cw" placeholder="out of 10" class="grds">
+        </div>
+        <div id="hwBx">
+            <p>Homework :</p>
+            <input id="hw" placeholder="out of 10" class="grds">
+        </div>
+        <div id="fpBx">
+            <p>Final Project :</p>
+            <input id="fp" placeholder="out of 10" class="grds">
+        </div>
+        <button onclick="calcGrades()" id="calcBtn">Calc</button>
+        <div id="rzlt" class="totalBx"></div>
+        <div class="preformanceBx">
+            <div id="GRT" class="great"><i class="bi bi-emoji-heart-eyes" style="font-size: 6.5rem; position: fixed; top: 75.9%;"></i>
+            </div>
+            <div id="MEH" class="meh"><i class="bi bi-emoji-expressionless " style="font-size: 6.5rem; position: fixed; top: 75.9%;"></i>
+            </div>
+            <div id="BAD" class="bad"><i class="bi bi-emoji-angry" style="font-size: 6.5rem; position: fixed; top: 75.9%;"></i>
+            </div>
+        </div>
+        <div id="emailBx"></div>
     </div>
+</div>
 </body>
 </html>

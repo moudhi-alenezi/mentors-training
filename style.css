@@ -1,53 +1,88 @@
 body {
-    background-color: #8E9AAF;
+    background-color: #35007A;
 }
 
 .container {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
-    width: 95%;
-    height: 700px;
+    width: 60%;
+    height: 500px;
     box-shadow: 0px 0px 25px 5px #EFD3D7;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center; 
-}
+} 
 
 .student {
-        background-color: #CBC0D3;
-        height: 120px;
-        width: 750px;
-        margin-top: 35px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center; 
+    border-radius: 50px 50px 50px 50px; 
+    border: 3px solid #CBC0D3;
+    height: 120px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center; 
+    width: 410px; 
+    color: rgb(188, 188, 160);
+    transition: transform 250ms;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.student:hover{
+    transform: translateY(-10px);
+}
+#calcBtn{
+    transition: transform 250ms;
+
+}
+#calcBtn:hover{
+    background-color: #3e299c;
+
+}
+.name {
+    padding-left: 2%;
+    width: 290px;
+}
 .pic {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin-left: -100px;
-        background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 0px;
+    background-color: white;
+    background-size: cover;
+    border: 3px solid rgb(188, 188, 160);
 }
 
-h3 {
-        margin-left: 10px;
+#srch{
+    width: 150px;
+    height: 29px;
+    margin-left: 3px;
+    border-radius: 50px 50px 50px 50px; 
+    background-color: rgba(0,0,0,0);
+    color: pink;
+    border:1px solid #884694;
+    outline: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+input:hover{
+    box-shadow: 0px 0px 5px 1px #EFD3D7;
+}
 
 .searchBar {
     display: flex;
-    flex-direction: column;
-    gap: .25rem;
+    flex-direction: row;
+    width: 180px;
+    margin: auto;
+    margin-top: 50px;
+    height: fit-content;
 }
 
-.hide{
-    display: none;
+#srchicn{
+    font-size: 1.6rem;
+    color: #884694;
 }
 
 a {
@@ -55,81 +90,244 @@ a {
     color: black;
 }
 
-.StudentInfos{
-   margin: auto;
-    width: 95%;
-    height: 1000px;
-    box-shadow: 0px 0px 25px 5px #EFD3D7;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+
+#gradingContainer{
+    display: none;
+    background-color: #5845ab86;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 
-.stuPic {
-    border-radius: 50%;
-    background-color: beige;
-    width: 150px;
-    height: 150px;
-    margin: -30px;
-    background-image: url(./1.jpeg);
-    background-size: cover;
-
+#gradesCard{
+    background-color: #5845abda;
+    position: fixed;
+    width: 30%;
+    height: 80%;
+    top: 12%;
+    left: 35%;
+    border: 2px solid #16007A;
+    box-shadow: 0px 0px 25px 5px #16007A;
 }
 
-.stuName, .stuTrack, .stuFavSnk {
-    width: 320px;
-    height: fit-content;
-    margin: -30px;
-    box-shadow: 0px 0px 25px 5px #EFD3D7;
-    text-align: center;
-    font-size: larger;
-    font-weight: bold;
-    
-}
-
-.CWS, .HWS, .FinalProject {
-    text-align: center;
-    margin-top: -20px;
-}
-
-.cwBox, .hwBox, .fpBox {
+#studentPic{
+    background-color: #3e299c9e;
     width: 100px;
-    height: fit-content;
-    margin-top: 10px;
+    height: 100px;
+    position: fixed;
+    top: 15%;
+    left: 47.5%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 5px #16007A;
+}
+
+#nameBx{
+    color: #a990f2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    background-color: #3e299c9e;
+    width: 20%;
+    height: 4%;
+    top: 30%;
+    left: 40%;
+    position: fixed;
+    border-radius: 50px 50px 50px 50px; 
+    box-shadow: 0px 0px 20px 5px #16007A;
+}
+
+#trackBx{
+    color: #a990f2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    background-color: #3e299c9e;
+    width: 20%;
+    height: 4%;
+    top: 36%;
+    left: 40%;
+    position: fixed;
+    border-radius: 50px 50px 50px 50px; 
+    box-shadow: 0px 0px 20px 5px #16007A;
+}
+
+#snackBx{
+    color: #a990f2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    background-color: #3e299c9e;
+    width: 20%;
+    height: 4%;
+    top: 42%;
+    left: 40%;
+    position: fixed;
+    border-radius: 50px 50px 50px 50px; 
+    box-shadow: 0px 0px 20px 5px #16007A;
+}
+
+#cwBx{
+    background-color: #3e299c9e;
+    width: 7%;
+    height: 13.5%;
+    top: 52%;
+    left: 39%;
+    position: fixed;
+    border-radius: 50px 50px 50px 50px; 
+    box-shadow: 0px 0px 20px 5px #16007A;
     text-align: center;
 }
-#cw, #hw, #fp{
-    width: 40px;
-}
-.happyFace, .mehFace, .sadFace{
-width: 60px;
-height: 60px;
-background-color: #CBC0D3;
-border-radius: 50%;
-margin: 5px;
-opacity: 50%;
-}
-.preformance{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: -200px;
-}
-.results{
-    width: 50px;
-    height: 50px;
+
+#hwBx{
+    background-color: #3e299c9e;
+    width: 7%;
+    height: 13.5%;
+    top: 52%;
+    left: 47%;
+    position: fixed;
+    border-radius: 50px 50px 50px 50px; 
+    box-shadow: 0px 0px 20px 5px #16007A;
     text-align: center;
-    font-size: large;
+
+}
+
+#fpBx{
+    background-color: #3e299c9e;
+    width: 7%;
+    height: 13.5%;
+    top: 52%;
+    left: 55%;
+    position: fixed;
+    border-radius: 50px 50px 50px 50px; 
+    box-shadow: 0px 0px 20px 5px #16007A;
+    text-align: center;
+
+}
+
+#calcBtn{
+    background-color: #3e299c9e;
+    width: 52px;
+    height: 22px;
+    top: 68%;
+    left: 49%;
+    position: fixed;
+    border-radius: 50px 50px 50px 50px; 
+    border: none;
+    box-shadow: 0px 0px 20px 5px #16007A;
+    color: #a990f2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.preformanceBx{
+    width: 29%;
+    height: 16%;
+    top: 75%;
+    left: 35.6%;
+    position: fixed;
+}
+
+.great, .meh, .bad{
+    width: 100px;
+    height: 100px;
+    top: 76.5%;
+    position: fixed;
+    border-radius: 50%;
+    opacity: 50%;
+}
+
+.great{
+    left: 36%;
+    background-color: #3aa332a2;
+}
+
+.meh{
+    left: 42.5%;
+    background-color: #a39f32a2;
+}
+
+.bad{
+    left: 49%;
+    background-color: #a34a32a2;
+}
+
+#emailBx{
+    width: 100px;
+    height: 100px;
+    top: 76.5%;
+    left: 58%;
+    position: fixed;
+}
+
+p{
+    color: #a990f2;
+    font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.grds{
+    width: 60px;
+    border-radius: 50px 50px 50px 50px; 
+    border: none;
+    height: 25px;
+    background-color: #241d5733;
+    color: #4361ee;
+    outline: none;
+    font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
     font-weight: bolder;
 }
-#red {
+
+.totalBx{
+    display: none;
+    background-color: #3e299c9e;
+    width: 55px;
+    height: 30px;
+    top: 69.5%;
+    left: 36%;
+    position: fixed;
+    border-radius: 0px 50px 0px 50px; 
+    border: none;
+    box-shadow: 0px 0px 20px 5px #16007A;
+    color: #16266b;
+    font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 25px;
+}
+
+#emailBx{
+    color: #201051;
+    font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 3px;
+}
+#delete{
     background-color: red;
+    border: none;
+    outline: none;
+    color: beige;
+    font-size: larger;
+position: relative;
+left: 95%;}
+
+.student, input, button, .bi-pencil-square {
+    cursor: pointer;
 }
-#yellow {
-    background-color: yellow;
+
+#BAD:hover{
+    box-shadow: 0px 0px 20px 5px #a34a32;
 }
-#green{
-    background-color: green;
+
+#MEH:hover{
+    box-shadow: 0px 0px 20px 5px #a39f32;
+}
+
+#GRT:hover{
+    box-shadow: 0px 0px 20px 5px #3aa332;
+}
+
+#delete:hover{
+    box-shadow: 0px 0px 20px 5px #a34a32;
 }
